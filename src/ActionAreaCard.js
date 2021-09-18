@@ -47,12 +47,15 @@ export default function ActionAreaCard({
             </Typography>
             <Button
               href={matchviewUrl}
-              variant="contained"
+              
               target="_blank"
               rel="noreferrer"
+              size="small"
+              color="primary"
             >
               More
             </Button>
+           
           </CardContent>
         </CardActionArea>
       </Card>
