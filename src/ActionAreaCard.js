@@ -4,33 +4,58 @@ import CardContent from "@mui/material/CardContent";
 // import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-import Iframe from "react-iframe";
+import CardMedia from "@mui/material/CardMedia";
+import Tooltip from "@mui/material/Tooltip";
+import Button from "@mui/material/Button";
 
-export default function ActionAreaCard({ urlVid, title, competition }) {
-  // console.log(url);
+export default function ActionAreaCard({
+  videoDiv,
+  title,
+  competition,
+  thumbnail,
+  matchviewUrl,
+}) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-
-        <Iframe
-          url={urlVid}
-          width="100%"
-          height="100%"
-          id="myId"
-          display="initial"
-          position="relative"
-          frameBorder="0"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {title || "example"}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {competition || "this is a competition"}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-    
+    <>
+      <Card sx={{ maxWidth: 345 }}>
+        <CardActionArea>
+          <Tooltip title="Click to view highlight">
+            <a
+              href={videoDiv.slice(90, 90 + 97)}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <CardMedia
+                component="img"
+                height="140"
+                image={thumbnail}
+                style={{
+                  backgroundImage:
+                    "url(" +
+                    "https://i.ytimg.com/vi/vMtUtTsfWUQ/maxresdefault.jpg" +
+                    ")",
+                }}
+              />
+            </a>
+          </Tooltip>
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {title || "example"}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {competition || "this is a competition"}
+            </Typography>
+            <Button
+              href={matchviewUrl}
+              variant="contained"
+              target="_blank"
+              rel="noreferrer"
+            >
+              More
+            </Button>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </>
   );
 }
