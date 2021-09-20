@@ -92,14 +92,14 @@ const action = (
       console.log(products,"products");
       // setProducts(final);
       setMap(final);
-      console.log(mapp, "map");
+      // console.log(mapp, "map");
     }
     else {
       handleClick();
     }
    
   }
- 
+
 
  
   
