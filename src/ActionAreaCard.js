@@ -32,7 +32,7 @@ export default function ActionAreaCard({
                 style={{
                   backgroundImage:
                     "url(" +
-                    "https://i.ytimg.com/vi/vMtUtTsfWUQ/maxresdefault.jpg" +
+                    "https://i.pinimg.com/originals/5f/00/32/5f0032f29fcde316f9e0ac455a7b924b.gif" +
                     ")",
                 }}
               />
@@ -47,7 +47,6 @@ export default function ActionAreaCard({
             </Typography>
             <Button
               href={matchviewUrl}
-              
               target="_blank"
               rel="noreferrer"
               size="small"
@@ -55,7 +54,6 @@ export default function ActionAreaCard({
             >
               More
             </Button>
-           
           </CardContent>
         </CardActionArea>
       </Card>
